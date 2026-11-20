@@ -3,7 +3,7 @@ from fastapi.responses import Response
 from src.config.database import database
 from src.controllers.auth import current,editor,admin
 from src.models.run import Run
-from src.schemas.requests import RunInput,ReviewInput
+from src.schemas.requests import RunInput,ReviewNote
 from src.services.report import submit,approve
 from src.services.export import csv_text
 from src.utils.serialize import row
@@ -18,7 +18,7 @@ def detail(id:int,db=Depends(database),u=Depends(current)):
  if not obj: raise HTTPException(404,'报告不存在')
  return row(obj)
 @router.post('/runs/{id}/approve')
-def review(id:int,b:ReviewInput,db=Depends(database),u=Depends(admin)): return row(approve(db,u,id,b.note))
+def review(id:int,b:ReviewNote,db=Depends(database),u=Depends(admin)): return row(approve(db,u,id,b.note))
 @router.get('/runs/{id}/csv')
 def download(id:int,db=Depends(database),u=Depends(current)):
  obj=db.get(Run,id)

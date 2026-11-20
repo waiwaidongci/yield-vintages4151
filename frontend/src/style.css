@@ -4,3 +4,14 @@
 .page-heading{border-bottom:4px double var(--accent);padding-bottom:20px}.sidebar{background:var(--paper);color:var(--ink);border-right:3px double var(--ink)}.sidebar nav a{border-color:var(--line)}.sidebar nav .active{color:var(--accent)}.sidebar footer button{border-color:var(--ink)}.report{border-top:5px solid var(--accent)}.metrics{gap:0;border-block:1px solid var(--accent)}.metrics>div{border-left:0;border-right:1px solid var(--line);padding:20px}.overview-count b{font-family:'Noto Serif SC',serif}.login-story{border-bottom:20px solid var(--accent)}.status.completed{border:1px solid var(--accent);transform:rotate(-2deg)}
 
 .policy-row{display:flex;flex-wrap:wrap;gap:15px;align-items:end;border-bottom:1px solid var(--line);padding:12px 0}.policy-row label{flex:1;min-width:140px}.policy-row button{font-size:11px;margin-bottom:14px;background:transparent;color:var(--ink)}#add-policy-row{background:transparent;color:var(--accent);border-color:var(--accent);margin:15px 0 25px}fieldset{border:1px solid var(--line);margin:20px 0}.weekday{display:inline-flex;align-items:center;margin:10px}.weekday input{width:auto;margin:0 6px 0 0}input[type=number]{appearance:textfield}
+.error-box,.warning-box,.ok-box{padding:16px 18px;margin:18px 0;border-left:4px solid var(--accent);background:color-mix(in oklch,var(--accent) 8%,var(--paper))}
+.error-box{border-left-color:oklch(.5 .18 25);background:color-mix(in oklch,oklch(.5 .18 25) 8%,var(--paper))}
+.ok-box{border-left-color:oklch(.45 .12 145)}
+.error-box b,.warning-box b,.ok-box b{font-family:'Noto Serif SC',serif}
+.error-box p,.warning-box p,.ok-box p{margin:8px 0 0;font-size:12px}
+.review-card h3{font-size:15px;margin:22px 0 10px}
+#resume-form{display:flex;flex-wrap:wrap;gap:15px;align-items:end;border-top:1px solid var(--line);padding-top:18px;margin-top:22px}
+#resume-form label{flex:1;min-width:220px;margin-bottom:0}
+.status.rejected{color:oklch(.5 .18 25);border:1px solid oklch(.5 .18 25)}
+.status.running{animation:pulse 1.2s infinite}
+@keyframes pulse{50%{opacity:.45}}
